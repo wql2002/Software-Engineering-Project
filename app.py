@@ -9,7 +9,7 @@ def index():
     if request.method == "GET":
         return render_template('index.html')
 
-@app.route('/user')
+@app.route('/usercenter')
 def usercenter():
     if request.method == "GET":
         return render_template('usercenter.html')

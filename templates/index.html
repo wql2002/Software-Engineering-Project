@@ -45,7 +45,7 @@
                     <!-- style="float: right;" -->
                     <el-menu-item index="3" disabled>发布任务</el-menu-item>
                     <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
-                    <el-menu-item index="5" style="float: right;">个人中心</el-menu-item>
+                    <el-menu-item index="5" @click="openUserCenter" style="float: right;">个人中心</el-menu-item>
                     <el-menu-item index="6" style="float: right;">登录</el-menu-item>
                     <el-menu-item index="7" style="float: right;">注册</el-menu-item>
                 </el-menu>
@@ -74,6 +74,9 @@
         methods: {
             handleSelect(key, keyPath) {
             console.log(key, keyPath);
+            },
+            openUserCenter(){
+                window.location.href = "/usercenter";
             }
         }
     });
